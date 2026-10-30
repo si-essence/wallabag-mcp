@@ -1,0 +1,256 @@
+{
+  "source": {
+    "repo": "https://github.com/wallabag/wallabag",
+    "tag": "2.6.15",
+    "commit": "9fd354dc162c9a5afc047699cef851d2a6c80cee",
+    "license": "MIT",
+    "note": "Derived @Route table from ApiBundle controllers. Paths drop .{_format} (default json). Symfony {param} is stored as Express :param."
+  },
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/api/entries/exists",
+      "name": "api_get_entries_exists",
+      "handler": "EntryRestController.getEntriesExistsAction",
+      "controller": "EntryRestController.php"
+    },
+    {
+      "method": "GET",
+      "path": "/api/entries",
+      "name": "api_get_entries",
+      "handler": "EntryRestController.getEntriesAction",
+      "controller": "EntryRestController.php"
+    },
+    {
+      "method": "GET",
+      "path": "/api/entries/:entry",
+      "name": "api_get_entry",
+      "handler": "EntryRestController.getEntryAction",
+      "controller": "EntryRestController.php"
+    },
+    {
+      "method": "GET",
+      "path": "/api/entries/:entry/export",
+      "name": "api_get_entry_export",
+      "handler": "EntryRestController.getEntryExportAction",
+      "controller": "EntryRestController.php"
+    },
+    {
+      "method": "DELETE",
+      "path": "/api/entries/list",
+      "name": "api_delete_entries_list",
+      "handler": "EntryRestController.deleteEntriesListAction",
+      "controller": "EntryRestController.php"
+    },
+    {
+      "method": "POST",
+      "path": "/api/entries/lists",
+      "name": "api_post_entries_list",
+      "handler": "EntryRestController.postEntriesListAction",
+      "controller": "EntryRestController.php"
+    },
+    {
+      "method": "POST",
+      "path": "/api/entries",
+      "name": "api_post_entries",
+      "handler": "EntryRestController.postEntriesAction",
+      "controller": "EntryRestController.php"
+    },
+    {
+      "method": "PATCH",
+      "path": "/api/entries/:entry",
+      "name": "api_patch_entries",
+      "handler": "EntryRestController.patchEntriesAction",
+      "controller": "EntryRestController.php"
+    },
+    {
+      "method": "PATCH",
+      "path": "/api/entries/:entry/reload",
+      "name": "api_patch_entries_reload",
+      "handler": "EntryRestController.patchEntriesReloadAction",
+      "controller": "EntryRestController.php"
+    },
+    {
+      "method": "DELETE",
+      "path": "/api/entries/:entry",
+      "name": "api_delete_entries",
+      "handler": "EntryRestController.deleteEntriesAction",
+      "controller": "EntryRestController.php"
+    },
+    {
+      "method": "GET",
+      "path": "/api/entries/:entry/tags",
+      "name": "api_get_entries_tags",
+      "handler": "EntryRestController.getEntriesTagsAction",
+      "controller": "EntryRestController.php"
+    },
+    {
+      "method": "POST",
+      "path": "/api/entries/:entry/tags",
+      "name": "api_post_entries_tags",
+      "handler": "EntryRestController.postEntriesTagsAction",
+      "controller": "EntryRestController.php"
+    },
+    {
+      "method": "DELETE",
+      "path": "/api/entries/:entry/tags/:tag",
+      "name": "api_delete_entries_tags",
+      "handler": "EntryRestController.deleteEntriesTagsAction",
+      "controller": "EntryRestController.php"
+    },
+    {
+      "method": "DELETE",
+      "path": "/api/entries/tags/list",
+      "name": "api_delete_entries_tags_list",
+      "handler": "EntryRestController.deleteEntriesTagsListAction",
+      "controller": "EntryRestController.php"
+    },
+    {
+      "method": "POST",
+      "path": "/api/entries/tags/lists",
+      "name": "api_post_entries_tags_list",
+      "handler": "EntryRestController.postEntriesTagsListAction",
+      "controller": "EntryRestController.php"
+    },
+    {
+      "method": "GET",
+      "path": "/api/search",
+      "name": "api_get_search",
+      "handler": "SearchRestController.getSearchAction",
+      "controller": "SearchRestController.php"
+    },
+    {
+      "method": "GET",
+      "path": "/api/tags",
+      "name": "api_get_tags",
+      "handler": "TagRestController.getTagsAction",
+      "controller": "TagRestController.php"
+    },
+    {
+      "method": "DELETE",
+      "path": "/api/tag/label",
+      "name": "api_delete_tag_label",
+      "handler": "TagRestController.deleteTagLabelAction",
+      "controller": "TagRestController.php"
+    },
+    {
+      "method": "DELETE",
+      "path": "/api/tags/label",
+      "name": "api_delete_tags_label",
+      "handler": "TagRestController.deleteTagsLabelAction",
+      "controller": "TagRestController.php"
+    },
+    {
+      "method": "DELETE",
+      "path": "/api/tags/:tag",
+      "name": "api_delete_tag",
+      "handler": "TagRestController.deleteTagAction",
+      "controller": "TagRestController.php"
+    },
+    {
+      "method": "GET",
+      "path": "/api/taggingrule/export",
+      "name": "api_get_taggingrule_export",
+      "handler": "TaggingRuleRestController.getTaggingruleExportAction",
+      "controller": "TaggingRuleRestController.php"
+    },
+    {
+      "method": "GET",
+      "path": "/api/annotations/:entry",
+      "name": "api_get_annotations",
+      "handler": "AnnotationRestController.getAnnotationsAction",
+      "controller": "AnnotationRestController.php"
+    },
+    {
+      "method": "POST",
+      "path": "/api/annotations/:entry",
+      "name": "api_post_annotation",
+      "handler": "AnnotationRestController.postAnnotationAction",
+      "controller": "AnnotationRestController.php"
+    },
+    {
+      "method": "PUT",
+      "path": "/api/annotations/:annotation",
+      "name": "api_put_annotation",
+      "handler": "AnnotationRestController.putAnnotationAction",
+      "controller": "AnnotationRestController.php"
+    },
+    {
+      "method": "DELETE",
+      "path": "/api/annotations/:annotation",
+      "name": "api_delete_annotation",
+      "handler": "AnnotationRestController.deleteAnnotationAction",
+      "controller": "AnnotationRestController.php"
+    },
+    {
+      "method": "GET",
+      "path": "/api/user",
+      "name": "api_get_user",
+      "handler": "UserRestController.getUserAction",
+      "controller": "UserRestController.php"
+    },
+    {
+      "method": "PUT",
+      "path": "/api/user",
+      "name": "api_put_user",
+      "handler": "UserRestController.putUserAction",
+      "controller": "UserRestController.php"
+    },
+    {
+      "method": "GET",
+      "path": "/api/config",
+      "name": "api_get_config",
+      "handler": "ConfigRestController.getConfigAction",
+      "controller": "ConfigRestController.php"
+    },
+    {
+      "method": "GET",
+      "path": "/api/version",
+      "name": "api_get_version",
+      "handler": "WallabagRestController.getVersionAction",
+      "controller": "WallabagRestController.php"
+    },
+    {
+      "method": "GET",
+      "path": "/api/info",
+      "name": "api_get_info",
+      "handler": "WallabagRestController.getInfoAction",
+      "controller": "WallabagRestController.php"
+    },
+    {
+      "method": "GET",
+      "path": "/developer",
+      "name": "developer",
+      "handler": "DeveloperController.indexAction",
+      "controller": "DeveloperController.php"
+    },
+    {
+      "method": "GET",
+      "path": "/developer/client/create",
+      "name": "developer_create_client_get",
+      "handler": "DeveloperController.createClientAction",
+      "controller": "DeveloperController.php"
+    },
+    {
+      "method": "POST",
+      "path": "/developer/client/create",
+      "name": "developer_create_client_post",
+      "handler": "DeveloperController.createClientAction",
+      "controller": "DeveloperController.php"
+    },
+    {
+      "method": "POST",
+      "path": "/developer/client/delete/:id",
+      "name": "developer_delete_client",
+      "handler": "DeveloperController.deleteClientAction",
+      "controller": "DeveloperController.php"
+    },
+    {
+      "method": "GET",
+      "path": "/developer/howto/first-app",
+      "name": "developer_howto_firstapp",
+      "handler": "DeveloperController.howtoFirstAppAction",
+      "controller": "DeveloperController.php"
+    }
+  ]
+}
